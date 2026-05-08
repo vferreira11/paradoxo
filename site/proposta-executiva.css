@@ -761,6 +761,25 @@ p, li, .hero-lead, .explanation, .nav-toggle {
   color: var(--ink-soft);
 }
 
+/* 4.5. Referências Editoriais Clássicas */
+.editorial-ref {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65em;
+  vertical-align: super;
+  color: var(--copper);
+  text-decoration: none;
+  padding: 0 0.1em;
+  margin-left: 2px;
+  margin-right: 1px;
+  transition: color 180ms ease, transform 180ms ease;
+  display: inline-block;
+  font-weight: 500;
+}
+.editorial-ref:hover {
+  color: var(--ink);
+  transform: translateY(-2px) scale(1.05);
+}
+
 /* 5. Abrandando linhas divisórias (para não ficarem grosseiras) */
 .hero-visual, .pillar-card, .diagnostic-form input, .diagnostic-form textarea {
   border-color: var(--line) !important;
