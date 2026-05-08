@@ -1,0 +1,17 @@
+<svg viewBox="0 0 950 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>    <path id="arm-1-MLIGHT" d="M 55.06,182.44 L 80.69,182.56 L 151.22,59.84 L 252.22,228.15 L 264.77,205.26 L 151.56,13.25 Z" />
+    <path id="arm-2-MLIGHT" d="M 15.63,206.06 L 27.5,228.44 L 252.3,228.28 L 151.23,59.86 L 138.55,81.93 L 211.73,205.93 Z" />
+    <path id="arm-3-MLIGHT" d="M 124.06,12.99 L 15.64,206.03 L 211.76,205.97 L 197.88,182.51 L 54.95,182.53 L 151.67,13.25 Z" />
+  <style>@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;500&amp;display=swap');</style>
+  </defs>
+  <g transform="translate(10, 10)">
+    <use href="#arm-3-MLIGHT" fill="#ffffff" fill-opacity="1.0" />
+    <use href="#arm-1-MLIGHT" fill="#ffffff" fill-opacity="0.55" />
+    <use href="#arm-2-MLIGHT" fill="#ffffff" fill-opacity="0.15" />
+  </g>
+  <text x="300" y="175" style="font-family:'Spectral', serif; font-weight:500; font-size:150px; letter-spacing:-0.04em; fill:#ffffff;">Paradoxo</text>
+  <text x="875" y="235" text-anchor="end" style="font-family:'Spectral', serif; font-weight:400; font-size:28px; letter-spacing:0.15em; text-transform:uppercase; fill:#ffffff;">IA Feita à Mão</text>
+</svg>
+
+
+

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paradoxo | IA feita à mão</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml">    
+    <!-- Open Graph / SEO Social -->
+    <meta property="og:title" content="Paradoxo | IA feita à mão">
+    <meta property="og:description" content="Diagnóstico, desenho e recomendações de Inteligência Artificial sob medida para empresas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paradoxo.pro">
+        <meta
+      name="description"
+      content="A Paradoxo resolve problemas de negócio com IA feita à mão: diagnóstico, desenho e recomendações sob medida para contextos que não aceitam receita pronta."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Spectral:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="proposta-executiva.css">
+    <script defer src="proposta-executiva.js"></script>
+    <style>
+      /* Utility overrides for Bento / Claude style */
+      .bento-split {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 120px;
+        align-items: start;
+        padding: 140px 8vw;
+      }
+      .bento-sticky {
+        position: sticky;
+        top: 140px;
+      }
+      .bento-item {
+        margin-bottom: 80px;
+        padding-bottom: 80px;
+        border-bottom: 1px solid var(--line);
+      }
+      .bento-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      .bento-number {
+        font-family: 'IBM Plex Mono', monospace;
+        color: var(--copper);
+        font-size: 1rem;
+        margin-bottom: 16px;
+        display: block;
+      }
+      .bento-item h3 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        margin: 0 0 16px;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+      .bento-item p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: var(--ink-soft);
+        max-width: 45ch;
+      }
+      /* Thesis Section */
+      .thesis-section {
+        padding: 140px 8vw;
+        border-bottom: 1px solid var(--line);
+      }
+      .thesis-text {
+        font-family: 'Spectral', serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1.1;
+        color: var(--ink);
+        max-width: 22ch;
+        margin: 0;
+      }
+      .thesis-sub {
+        margin-top: 40px;
+        font-size: 1.25rem;
+        max-width: 50ch;
+        color: var(--ink-soft);
+      }
+      @media (max-width: 900px) {
+        .bento-split { grid-template-columns: 1fr; gap: 60px; padding: 80px 6vw; }
+        .bento-sticky { position: static; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#inicio" aria-label="Paradoxo home" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+          <img src="logo.svg" alt="Logotipo Paradoxo" style="width: 32px; height: 32px; object-fit: contain;">
+          <span style="font-family: 'Spectral', serif; font-weight: 500; font-size: 1.5rem; letter-spacing: -0.04em; color: var(--ink);">Paradoxo</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav">
+          <a href="#inicio">Início</a>
+          <a href="#tese">A Tese</a>
+          <a href="#metodo">O Método</a>
+          <a class="nav-cta" href="#contato">Falar com Consultor</a>
+        </nav>
+      </header>
+
+      <main>
+        <!-- SEÇÃO 1: HERO -->
+        <section id="inicio" class="hero hero-clean section-surface reveal">
+          <div class="hero-copy-unified">
+            <p class="eyebrow">Para quem não tem tempo a perder</p>
+            <h1>IA feita à mão para problemas de verdade.</h1>
+            <p class="hero-lead">
+              A Paradoxo ajuda sua empresa a resolver problemas reais através do uso estratégico e direcionado de IA. Sem palavras difíceis, sem soluções genéricas.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contato">Entre em contato</a>
+              <a class="button button-secondary" href="#tese">Entenda a abordagem</a>
+            </div>
+            <ul class="signal-list" style="justify-content: center; margin-top: 16px;">
+              <li>Atendimento exclusivo</li>
+              <li>Solução personalizada</li>
+              <li>Respeito com seus processos</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- SEÇÃO 2: TESE (A Pausa) -->
+        <section id="tese" class="thesis-section section-surface reveal" >
+            <h2 class="thesis-text">Nós atacamos o problema.</h2>
+            <p class="thesis-sub">95% das implementações de IA falha porque usam soluções genéricas para problemas específicos.</p>
+        </section>
+
+        <!-- SEÇÃO 3: O MÉTODO (Claude / Anthropic Asymmetrical Scroll) -->
+        <section id="metodo" class="bento-split section-surface reveal" >
+            <div class="bento-sticky">
+                <p class="eyebrow">Nosso Método</p>
+                <h2 style="font-family: 'Spectral', serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: 16px 0;">Como reduzimos complexidade à execução.</h2>
+                <p style="color: var(--ink-soft); max-width: 30ch;">Uma engenharia reversa do seu contexto de negócios, sem atalhos.</p>
+            </div>
+            
+            <div class="bento-scroll">
+                <div class="bento-item">
+                    <span class="bento-number">01 // ESCUTA</span>
+                    <h3>Entrevistas com quem decide</h3>
+                    <p>Escuta genuína para entender quais dores são geradas pelos seus problemas. Mapeamos a cultura e os gargalos antes de propor tecnologia.</p>
+                </div>
+                <div class="bento-item">
+                    <span class="bento-number">02 // RECORTES</span>
+                    <h3>Identificação do problema real</h3>
+                    <p>Definição daquilo que mais merece energia imediatamente, com clareza matemática sobre impacto, causa e urgência.</p>
+                </div>
+                <div class="bento-item">
+                    <span class="bento-number">03 // PROCESSO</span>
+                    <h3>Mapeamento da cadeia</h3>
+                    <p>Nada surge do nada. Analisamos onde a situação começa a sair dos eixos e onde a IA pode atuar como alavanca (e não apenas adorno).</p>
+                </div>
+                <div class="bento-item">
+                    <span class="bento-number">04 // EXECUÇÃO</span>
+                    <h3>Matriz e Plano de Ação</h3>
+                    <p>Ataques direcionados para resolver o que é mais urgente. Entregamos um readout executivo pronto para implementação.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: O ENTREGÁVEL -->
+        <section class="section-surface reveal" style="display: flex; flex-direction: column;">
+            <div style="max-width: 1000px; margin: 0 auto; width: 100%;">
+                <p class="eyebrow" style="text-align: center; padding-top: 80px;">O Entregável</p>
+                <h2 style="font-family: 'Spectral', serif; font-size: clamp(2rem, 4vw, 3.2rem); margin: 16px auto 80px; max-width: 24ch; text-align: center; color: var(--ink);">
+                    A saída do diagnóstico é clareza pronta para execução.
+                </h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 60px; border-top: 1px solid var(--line); padding-top: 60px;">
+                    <div>
+                        <span class="bento-number" style="margin-bottom: 16px; font-size: 0.85rem;">01 // PROBLEMA</span>
+                        <h3 style="font-family: 'Newsreader', serif; font-size: 1.8rem; color: var(--ink); margin: 0 0 12px; font-weight: 500;">Recorte Prioritário</h3>
+                        <p style="color: var(--ink-soft); line-height: 1.6; font-size: 1.1rem; margin: 0;">Isolamos o gargalo matemático que justifica o investimento, removendo ruídos e problemas secundários.</p>
+                    </div>
+                    <div>
+                        <span class="bento-number" style="margin-bottom: 16px; font-size: 0.85rem;">02 // TECNOLOGIA</span>
+                        <h3 style="font-family: 'Newsreader', serif; font-size: 1.8rem; color: var(--ink); margin: 0 0 12px; font-weight: 500;">IA Sob Medida</h3>
+                        <p style="color: var(--ink-soft); line-height: 1.6; font-size: 1.1rem; margin: 0;">Mapeamos exatamente qual arquitetura resolve a dor, sem empurrar o hype do momento.</p>
+                    </div>
+                    <div>
+                        <span class="bento-number" style="margin-bottom: 16px; font-size: 0.85rem;">03 // DIREÇÃO</span>
+                        <h3 style="font-family: 'Newsreader', serif; font-size: 1.8rem; color: var(--ink); margin: 0 0 12px; font-weight: 500;">Plano Executável</h3>
+                        <p style="color: var(--ink-soft); line-height: 1.6; font-size: 1.1rem; margin: 0;">Um cronograma tático de como implementar a solução, com sua equipe ou com o nosso braço técnico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 5: CONTATO (CTA) -->
+        <section id="contato" class="closing section-surface reveal cta-closing">
+            <p class="eyebrow">Próximo Passo</p>
+            <h2>
+                Agende um momento de escuta com nossos sócios.
+            </h2>
+            <p>
+                Sem compromisso comercial escondido. Começamos com uma conversa honesta de 30 minutos para entender se a Paradoxo é a ferramenta certa para a sua alavanca.
+            </p>
+            <a class="button button-primary" href="mailto:contato@paradoxo.ai" target="_blank" rel="noopener noreferrer" style="font-size: 1.1rem; padding: 16px 32px;">Falar com Consultor</a>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-content">
+          <p class="copyright">© 2026 Paradoxo. Todos os direitos reservados.</p>
+          <div class="footer-links">
+            <a href="#">Privacidade</a>
+            <a href="#">Termos</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+

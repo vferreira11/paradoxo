@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><body>
+<svg viewBox="-80 -80 160 160" style="width: 500px; height: 500px;">
+  <!-- Arm 1 (Red) -->
+  <polygon id="arm1" points="0,-40 -34.64,-20 -34.64,40 -17.32,50 -17.32,10 17.32,-10" fill="red" />
+  <!-- Arm 2 (Green) -->
+  <polygon id="arm2" points="0,-40 -34.64,-20 -34.64,40 -17.32,50 -17.32,10 17.32,-10" fill="green" transform="rotate(120)" />
+  <!-- Arm 3 (Blue) -->
+  <polygon id="arm3" points="0,-40 -34.64,-20 -34.64,40 -17.32,50 -17.32,10 17.32,-10" fill="blue" transform="rotate(240)" />
+  
+  <clipPath id="top-clip">
+    <rect x="-50" y="-50" width="100" height="40" /> <!-- y from -50 to -10 -->
+  </clipPath>
+  
+  <!-- Re-draw top part of Arm 1 to cover Arm 3's tail -->
+  <use href="#arm1" clip-path="url(#top-clip)" />
+</svg>
+</body></html>

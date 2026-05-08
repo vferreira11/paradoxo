@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Brand Book - Paradoxo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Spectral', serif;
+            background-color: #FBF8F3;
+            color: #172225;
+            line-height: 1.7;
+            padding: 50px 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 60px 80px;
+            box-shadow: 0 10px 30px rgba(23, 34, 37, 0.05);
+            border-top: 6px solid #b96c48;
+        }
+        h1, h2, h3 {
+            font-weight: 500;
+            color: #172225;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+            letter-spacing: -0.02em;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 1.8em;
+            border-bottom: 1px solid #ebd2c1;
+            padding-bottom: 10px;
+            color: #324247;
+        }
+        p, li {
+            font-size: 1.1em;
+            color: #324247;
+        }
+        li { margin-bottom: 10px; }
+        strong { color: #172225; font-weight: 700; }
+        code {
+            background-color: #F2EDE3;
+            color: #b96c48;
+            padding: 2px 6px;
+            font-family: monospace;
+            border-radius: 3px;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ebd2c1;
+            margin: 40px 0;
+        }
+        @media print {
+            body { background: #fff; padding: 0; }
+            .container { box-shadow: none; padding: 0; border: none; }
+            @page { margin: 2cm; }
+            h2 { page-break-after: avoid; }
+            li, p { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container"><p># Brand Book: O Padrão Ouro do Logotipo Paradoxo</p>
+
+<h2>Objetivo</h2>
+
+<p>Este manual define a identidade visual definitiva da marca Paradoxo. Ele estabelece as regras de tipografia, construção geométrica, paletas de cores e uso do "enxoval" de logotipos vetoriais. A identidade repousa sobre a ideia de uma IA refinada, que dispensa clichês futuristas em favor de elegância, peso editorial e geometria enigmática.</p>
+
+<h2>Tese do Logotipo</h2>
+
+<p>O logotipo da Paradoxo comunica quatro ideias indissociáveis:</p>
+<ul><li><strong>Paradoxo como tensão inteligente entre opostos.</strong></li>
+<li><strong>IA feita a mão</strong>, com rigor de alfaiataria em código.</li>
+<li><strong>Rigor, clareza e sofisticação editorial</strong>, sem neon, sem roxo, sem gradientes digitais.</li>
+<li><strong>Arquitetura clássica</strong>, onde a tipografia se equilibra como uma fundação contraponto ao ícone de alto peso visual.</li>
+
+<p>O símbolo (Triângulo de Penrose) representa essa tensão geométrica — uma impossibilidade elegante, esculpida como metal dobrado.</p>
+
+<h2>O Enxoval de Assinaturas (Arquivos SVG)</h2>
+
+<p>Foram gerados e polidos algoritmicamente cinco ativos principais na pasta raiz <code>site/</code>:</p>
+
+<li><strong><code>logo-slogan.svg</code> (Horizontal Padrão Ouro)</strong></li>
+<p>   - <strong>Uso:</strong> Header do site, papel timbrado, propostas executivas no topo.</p>
+<p>   - <strong>Estrutura:</strong> Ícone à esquerda, marca (Paradoxo) centralizada no seu próprio eixo de leitura, slogan "IA FEITA À MÃO" funcionando como pedestal.</p>
+<p>   - <strong>Engenharia de Alinhamento:</strong> O slogan possui ancoragem matemática (<code>text-anchor="end"</code>) cravada milimetricamente embaixo do limite direito da letra "o" de Paradoxo, criando uma moldura invisível e estável de contra-peso.</p>
+
+<li><strong><code>logo-vertical.svg</code> (Assinatura Empilhada)</strong></li>
+<p>   - <strong>Uso:</strong> Capas de documentos premium, telas de celular (mobile), avatares, perfis sociais.</p>
+<p>   - <strong>Estrutura:</strong> Ícone ao topo, Marca no meio, Slogan abaixo.</p>
+<p>   - <strong>Tracking Específico:</strong> Para que o slogan atue como base sem desaparecer sob a marca de 140px, seu tracking sobe para <code>0.35em</code>. Tudo é estritamente centralizado.</p>
+
+<li><strong><code>logo-mono-dark.svg</code> & <code>logo-mono-light.svg</code></strong></li>
+<p>   - <strong>Uso:</strong> Sobreposições em fotos complexas, fundos escuros e parcerias em marcas d'água.</p>
+<p>   - <strong>Materialidade Automática (Glassmorfismo):</strong> A ilusão 3D monocromática NÃO usa contornos vulgares. O SVG opera com controle de opacidade chumbo ou branca: 100% de opacidade no braço inferior direito, 55% no braço esquerdo, e 15% de transparência no braço do topo. Isso gela e absorve as cores do fundo.</p>
+
+<li><strong><code>logo-extenso.svg</code> e <code>logo.svg</code></strong></li>
+<p>   - Versões avulsas utilitárias para quando o slogan não precisa ser lido (como o favicon e marcações do footer).</p>
+
+<h2>A Tipografia Oficial da Marca</h2>
+
+<p>Ambos Marca e Slogan compartilham a mesma família editorial clássica, provando que é possível ser luxuoso sem múltiplos corpos de fonte.</p>
+
+<p><strong>A Marca (Paradoxo)</strong></p>
+<li><strong>Família:</strong> <code>Spectral</code>, serif</li>
+<li><strong>Peso:</strong> 500 (Medium) — traz contundência sem exagero "bold".</li>
+<li><strong>Tracking:</strong> <code>-0.04em</code> — aproxima as letras, criando um bloco de leitura sólido (Wordmark).</li>
+<li><strong>Cor:</strong> Ink (<code>#172225</code>) ou Branco Puro (<code>#ffffff</code>).</li>
+
+<p><strong>O Slogan (IA Feita à Mão)</strong></p>
+<li><strong>Família:</strong> <code>Spectral</code>, serif</li>
+<li><strong>Peso:</strong> 400 (Regular)</li>
+<li><strong>Tracking:</strong> <code>0.15em</code> (Uso Horizontal) ou <code>0.35em</code> (Uso Vertical). As letras "respiram", servindo como chão da casa arquitetônica da marca.</li>
+<li><strong>Transformação:</strong> Todas em maiúsculas (<code>uppercase</code>).</li>
+<li><strong>Cor:</strong> Ink Soft (<code>#324247</code>) para rebaixar o volume do subtexto em relação à marca.</li>
+
+<h2>Estrutura do Símbolo (Triângulo de Penrose)</h2>
+
+<p>O símbolo original tricolor rompe as convenções web usando paletas quentes terrosas. </p>
+<li><strong>Braço 1 (Esquerda ascendente):</strong> Rose/Soft Copper (<code>#ebd2c1</code>)</li>
+<li><strong>Braço 2 (Base à direita):</strong> Dark Copper/Bronze (<code>#b96c48</code>)</li>
+<li><strong>Braço 3 (Topo cruzando para a esquerda):</strong> White (<code>#ffffff</code>) proporcionando o alto contraste respirável.</li>
+
+<h2>Diretrizes de Uso e Limites</h2>
+
+<li><strong>Nunca modifique o tracking do slogan horizontal.</strong> O recuo de 0.15em foi projetado junto da âncora final à direita (ponta alinhada milimetricamente à letra "o" superior).</li>
+<li><strong>Espaço Seguro:</strong> Nunca cole elementos ao redor do logotipo. O espaçamento inerente do SVG (ViewBox de <code>1200x360</code>) atua como a área de respiro (Airspace) necessária. No CSS, não alterne tamanhos sem invocar <code>width</code> / <code>height</code> que respeitem a proporção (<code>10:3</code>).</li>
+<li><strong>Restrições de Cor Proibidas:</strong> Sem azul elétrico, nem roxo vibrante das marcas genéricas de SaaS. Sem "gradiente" simulado — deixe flat e preserve as arestas duras do Vetor.</li>
+<li><strong>Quando usar Monocromático:</strong> Se a leitura do Cobre (<code>#b96c48</code>) do ícone conflitar fortemente contra um papel escuro de fundo (ex: por cima de #172225), abandone a versão multicor imediatamente e puxe a versão <code>logo-mono-light</code>.</li></ul>
+
+<hr>
+<p>*Atualizado em: MAIO/2026 — Identidade Golden Standard Paradoxo Consolidada*</p>
+    </div>
+</body>
+</html>

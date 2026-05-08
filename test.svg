@@ -1,0 +1,7 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0, 7)">
+    <path d="M 0,86.6025 L 50,0 L 73.09,40 L 50,40 L 23.09,86.6025 Z" fill="red" />
+    <path d="M 0,86.6025 L 50,0 L 73.09,40 L 50,40 L 23.09,86.6025 Z" fill="green" transform="rotate(120, 50, 57.735)" />
+    <path d="M 0,86.6025 L 50,0 L 73.09,40 L 50,40 L 23.09,86.6025 Z" fill="blue" transform="rotate(240, 50, 57.735)" />
+  </g>
+</svg>

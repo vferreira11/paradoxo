@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paradoxo | Manual da Marca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="proposta-executiva.css">
+    <style>
+      :root {
+        --font-logo: 'Spectral', serif;
+        --font-body: 'Newsreader', serif;
+        --font-mono: 'IBM Plex Mono', monospace;
+      }
+      body {
+        background: var(--paper-strong);
+        font-family: var(--font-body);
+      }
+      .manual-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 80px 40px;
+      }
+      .manual-header {
+        margin-bottom: 80px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 40px;
+      }
+      .manual-header h1 {
+        font-size: 3.5rem;
+        margin: 10px 0 20px 0;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+      }
+      .manual-lead {
+        font-size: 1.4rem;
+        opacity: 0.8;
+        max-width: 700px;
+        line-height: 1.5;
+      }
+      
+      .manual-section {
+        margin-bottom: 80px;
+      }
+      .manual-section h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .manual-section h2::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--line);
+      }
+
+      /* Logo Display */
+      .logo-showcase {
+        background: var(--ink);
+        border-radius: var(--radius-lg);
+        padding: 100px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: var(--shadow);
+      }
+      .logo-final {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+      .logo-final svg {
+        width: 120px;
+        height: 120px;
+      }
+      .logo-final .marca {
+        font-family: var(--font-logo);
+        color: var(--paper);
+        font-size: 5rem;
+        font-weight: 500;
+        letter-spacing: -0.04em;
+        line-height: 1;
+      }
+
+      /* Colors */
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+      }
+      .color-card {
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+      .color-swatch {
+        height: 140px;
+        display: flex;
+        align-items: flex-end;
+        padding: 20px;
+      }
+      .color-details {
+        padding: 20px;
+        background: #fff;
+      }
+      .color-name {
+        font-family: var(--font-mono);
+        font-weight: 500;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+      .color-hex {
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        opacity: 0.6;
+      }
+
+      /* Typography */
+      .type-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .type-card {
+        background: #fff;
+        padding: 40px;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--line);
+      }
+      .type-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 30px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 20px;
+      }
+      .type-name {
+        font-size: 2rem;
+      }
+      .type-role {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        opacity: 0.6;
+      }
+      .type-sample {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .alphabet {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        opacity: 0.7;
+        word-break: break-all;
+      }
+
+      /* Specific Fonts */
+      .type-spectral .type-name, .type-spectral .type-sample { font-family: var(--font-logo); font-weight: 500; letter-spacing: -0.04em; }
+      .type-newsreader .type-name, .type-newsreader .type-sample { font-family: var(--font-body); font-weight: 400; }
+      .type-plex .type-name, .type-plex .type-sample { font-family: var(--font-mono); font-weight: 400; }
+    </style>
+  </head>
+  <body>
+    <div class="manual-container">
+      <header class="manual-header">
+        <p class="eyebrow" style="font-family: 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem;">DNA Visual</p>
+        <h1>Brand Book: Paradoxo</h1>
+        <p class="manual-lead">A consolidação definitiva da infraestrutura visual da marca. O cruzamento entre tecnologia dura (Monospaced), calor humano (Editorial) e engenharia irreal (Triângulo de Penrose).</p>
+      </header>
+
+      <section class="manual-section">
+        <h2>O Logotipo Final</h2>
+        <div class="logo-showcase">
+          <div class="logo-final">
+            <svg viewBox="0 0 280 243" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <path id="arm-1" d="M 55.06,182.44 L 80.69,182.56 L 151.22,59.84 L 252.22,228.15 L 264.77,205.26 L 151.56,13.25 Z" />
+                <path id="arm-2" d="M 15.63,206.06 L 27.5,228.44 L 252.3,228.28 L 151.23,59.86 L 138.55,81.93 L 211.73,205.93 Z" />
+                <path id="arm-3" d="M 124.06,12.99 L 15.64,206.03 L 211.76,205.97 L 197.88,182.51 L 54.95,182.53 L 151.67,13.25 Z" />
+              </defs>
+              <use href="#arm-3" fill="#ffffff" />
+              <use href="#arm-1" fill="#ebd2c1" />
+              <use href="#arm-2" fill="#b96c48" />
+            </svg>
+            <div class="marca">Paradoxo</div>
+          </div>
+        </div>
+        <p style="margin-top: 20px; text-align: center; opacity: 0.7; font-size: 1.1rem;">Triângulo isométrico com renderização metálica (Copper/Areia) ao lado do letreiro esculpido em Spectral 500 Medium Condensada.</p>
+      </section>
+
+      <section class="manual-section">
+        <h2>Paleta de Cores</h2>
+        <div class="color-grid">
+          
+          <div class="color-card">
+            <div class="color-swatch" style="background: #172225; color: #fff;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.5;">Fundo / Texto</span>
+            </div>
+            <div class="color-details">
+              <div class="color-name">Ink (Nanquim)</div>
+              <div class="color-hex">#172225</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div class="color-swatch" style="background: #fbf8f3; color: #172225; border-bottom: 1px solid var(--line);">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.5;">Base Principal</span>
+            </div>
+            <div class="color-details">
+              <div class="color-name">Paper Strong</div>
+              <div class="color-hex">#fbf8f3</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div class="color-swatch" style="background: #b96c48; color: #fff;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.5;">Destaque / Face 2</span>
+            </div>
+            <div class="color-details">
+              <div class="color-name">Copper</div>
+              <div class="color-hex">#b96c48</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div class="color-swatch" style="background: #ebd2c1; color: #172225;">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.5;">Sombra / Face 1</span>
+            </div>
+            <div class="color-details">
+              <div class="color-name">Copper Sand</div>
+              <div class="color-hex">#ebd2c1</div>
+            </div>
+          </div>
+
+          <div class="color-card">
+            <div class="color-swatch" style="background: #ffffff; color: #172225; border-bottom: 1px solid var(--line);">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.5;">Luz / Face Topo</span>
+            </div>
+            <div class="color-details">
+              <div class="color-name">Solid White</div>
+              <div class="color-hex">#ffffff</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="manual-section">
+        <h2>Arquitetura Tipográfica</h2>
+        <div class="type-grid">
+          
+          <!-- Selo -->
+          <div class="type-card type-spectral">
+            <div class="type-header">
+              <div class="type-name">Spectral Medium</div>
+              <div class="type-role">1. O Carimbo Oficial (Logotipo)</div>
+            </div>
+            <div class="type-sample">Paradoxo</div>
+            <div class="alphabet" style="font-family: 'Spectral', serif;">
+              Usada exclusivamente no logotipo.<br>
+              A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+              a b c d e f g h i j k l m n o p q r s t u v w x y z<br>
+              1 2 3 4 5 6 7 8 9 0 ! @ # $ % & *
+            </div>
+          </div>
+
+          <!-- Voz -->
+          <div class="type-card type-newsreader">
+            <div class="type-header">
+              <div class="type-name">Newsreader</div>
+              <div class="type-role">2. O Tonal Intelectual (Leitura e Títulos)</div>
+            </div>
+            <div class="type-sample">A camada de IA feita à mão.</div>
+            <div class="alphabet" style="font-family: 'Newsreader', serif;">
+              A "Voz Claude" do site. Traz humanidade, precisão acadêmica e fluidez de tela aos textos longos e manchetes.<br><br>
+              A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+              a b c d e f g h i j k l m n o p q r s t u v w x y z<br>
+              1 2 3 4 5 6 7 8 9 0 ! @ # $ % & *
+            </div>
+          </div>
+
+          <!-- Maquina -->
+          <div class="type-card type-plex">
+            <div class="type-header">
+              <div class="type-name">IBM Plex Mono</div>
+              <div class="type-role">3. A Interface Cruda (Sinalização e Máquina)</div>
+            </div>
+            <div class="type-sample">console.log("IA Real")</div>
+            <div class="alphabet" style="font-family: 'IBM Plex Mono', monospace;">
+              Usada em marcações superiores (eyebrows), botões, menus, números, selos operacionais e terminais.<br><br>
+              A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+              a b c d e f g h i j k l m n o p q r s t u v w x y z<br>
+              1 2 3 4 5 6 7 8 9 0 ! @ # $ % & *
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </body>
+</html>

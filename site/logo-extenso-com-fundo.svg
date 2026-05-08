@@ -1,0 +1,32 @@
+<svg viewBox="0 0 1200 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@500&amp;display=swap');
+      .brand-text {
+        font-family: 'Spectral', serif;
+        font-weight: 500;
+        font-size: 150px;
+        letter-spacing: -0.04em;
+        fill: #172225;
+      }
+    </style>
+    <path id="arm-1" d="M 55.06,182.44 L 80.69,182.56 L 151.22,59.84 L 252.22,228.15 L 264.77,205.26 L 151.56,13.25 Z" />
+    <path id="arm-2" d="M 15.63,206.06 L 27.5,228.44 L 252.3,228.28 L 151.23,59.86 L 138.55,81.93 L 211.73,205.93 Z" />
+    <path id="arm-3" d="M 124.06,12.99 L 15.64,206.03 L 211.76,205.97 L 197.88,182.51 L 54.95,182.53 L 151.67,13.25 Z" />
+  </defs>
+  
+  <!-- Fundo Sólido (Paper Strong) -->
+  <rect width="1200" height="450" fill="#fbf8f3" />
+
+  <!-- Grupo perfeitamente centralizado no canvas -->
+  <!-- A largura total do ícone+texto é ~960px. 1200-960 = 240. Margem lateral = 120px -->
+  <g transform="translate(130, 103)">
+    <!-- Símbolo (Triângulo de Penrose) -->
+    <use href="#arm-3" fill="#ffffff" />
+    <use href="#arm-1" fill="#ebd2c1" />
+    <use href="#arm-2" fill="#b96c48" />
+
+    <!-- Tipografia da Marca -->
+    <text x="320" y="195" class="brand-text">Paradoxo</text>
+  </g>
+</svg>

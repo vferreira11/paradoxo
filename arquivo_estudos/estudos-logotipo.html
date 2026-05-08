@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paradoxo | Estudos de Logotipo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Spectral:ital,wght@0,400;0,500;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="proposta-executiva.css">
+    <style>
+      .studies-container {
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .studies-header {
+        margin-bottom: 60px;
+        text-align: center;
+      }
+      .study-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 40px;
+      }
+      .study-card {
+        background: var(--paper-strong);
+        border: 1px solid rgba(23, 34, 37, 0.08);
+        border-radius: var(--radius-lg);
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      }
+      .study-card.dark {
+        background: var(--ink);
+        color: var(--paper);
+      }
+      .logo-display {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .logo-symbol {
+        width: 64px;
+        height: 64px;
+      }
+      .logo-type {
+        font-family: "Spectral", serif;
+        font-size: 2.2rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
+      .study-label {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: rgba(23, 34, 37, 0.5);
+        letter-spacing: 0.1em;
+        text-align: center;
+      }
+      .dark .study-label {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .explanation {
+        font-size: 0.9rem;
+        text-align: center;
+        line-height: 1.5;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="studies-container">
+      <div class="studies-header">
+        <p class="eyebrow" style="font-family: 'Inter', sans-serif; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.8rem;">Harmonização Tipográfica</p>
+        <h1 style="font-family: 'Newsreader', serif; font-size: 3.5rem; margin: 10px 0; font-weight: 500; letter-spacing: -0.02em;">O Estilo "Claude"</h1>
+        <p style="opacity: 0.8; max-width: 650px; margin: 0 auto; line-height: 1.6; font-family: 'Newsreader', serif; font-size: 1.2rem;">
+          O logotipo está fixado na força da <strong>Spectral Medium (500)</strong>. Agora, testamos diferentes famílias tipográficas para os textos, buscando aquela estética editorial, hiper-legível, humana e quente que contrasta com a engenharia do símbolo.
+        </p>
+      </div>
+
+      <div class="study-grid">
+        
+        <!-- Estudo 1: Newsreader (O Serif Claude Clássico) -->
+        <div class="study-card" style="font-family: 'Newsreader', serif;">
+          <div class="study-label" style="font-family: 'Inter', sans-serif; font-weight: 500;">1. Newsreader (Editorial)</div>
+          <div class="logo-display">
+            <svg class="logo-symbol" viewBox="0 0 280 243" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <path id="arm-1" d="M 55.06,182.44 L 80.69,182.56 L 151.22,59.84 L 252.22,228.15 L 264.77,205.26 L 151.56,13.25 Z" />
+                <path id="arm-2" d="M 15.63,206.06 L 27.5,228.44 L 252.3,228.28 L 151.23,59.86 L 138.55,81.93 L 211.73,205.93 Z" />
+                <path id="arm-3" d="M 124.06,12.99 L 15.64,206.03 L 211.76,205.97 L 197.88,182.51 L 54.95,182.53 L 151.67,13.25 Z" />
+              </defs>
+              <use href="#arm-3" fill="#ffffff" />
+              <use href="#arm-1" fill="#ebd2c1" />
+              <use href="#arm-2" fill="var(--copper)" />
+            </svg>
+            <div class="logo-type" style="font-family: 'Spectral', serif; color: var(--ink); font-weight: 500; font-size: 2.3rem; letter-spacing: -0.04em;">Paradoxo</div>
+          </div>
+          <p class="explanation" style="font-size: 1.05rem;">A <em>Newsreader</em> é uma fonte serifada projetada especificamente para fluidez de leitura na tela moderna. Ela traz o exato tom intelectual, quente e orgânico (vibração do site original da Anthropic) para embalar a dureza do logotipo.</p>
+        </div>
+
+        <!-- Estudo 2: Inter (A Clareza de Interface) -->
+        <div class="study-card" style="font-family: 'Inter', sans-serif;">
+          <div class="study-label" style="font-family: 'Inter', sans-serif; font-weight: 500;">2. Inter (Tech Minimalista)</div>
+          <div class="logo-display">
+            <svg class="logo-symbol" viewBox="0 0 280 243" xmlns="http://www.w3.org/2000/svg">
+              <use href="#arm-3" fill="#ffffff" />
+              <use href="#arm-1" fill="#ebd2c1" />
+              <use href="#arm-2" fill="var(--copper)" />
+            </svg>
+            <div class="logo-type" style="font-family: 'Spectral', serif; color: var(--ink); font-weight: 500; font-size: 2.3rem; letter-spacing: -0.04em;">Paradoxo</div>
+          </div>
+          <p class="explanation" style="font-size: 1rem;">Se não quisermos uma Serif, a <em>Inter</em> cria o canvas invisível ideal. Ela é a fonte de UI mais amada globalmente por sua clareza irretocável. Destaca absolutamente todo o traço marcante da IBM Plex Mono e do símbolo, sem competir.</p>
+        </div>
+
+        <!-- Estudo 3: Spectral (Serifa Delicada e Poética) -->
+        <div class="study-card" style="font-family: 'Spectral', serif;">
+          <div class="study-label" style="font-family: 'Inter', sans-serif; font-weight: 500;">3. Spectral (Elegância Etérea)</div>
+          <div class="logo-display">
+            <svg class="logo-symbol" viewBox="0 0 280 243" xmlns="http://www.w3.org/2000/svg">
+              <use href="#arm-3" fill="#ffffff" />
+              <use href="#arm-1" fill="#ebd2c1" />
+              <use href="#arm-2" fill="var(--copper)" />
+            </svg>
+            <div class="logo-type" style="font-family: 'Spectral', serif; color: var(--ink); font-weight: 500; font-size: 2.3rem; letter-spacing: -0.04em;">Paradoxo</div>
+          </div>
+          <p class="explanation" style="font-size: 1.1rem;">A <em>Spectral</em> já testamos antes, mas aqui ela entra apenas no texto e nos parágrafos. Ela é ligeiramente mais leve e poética que a Newsreader, trazendo uma sutil aura de "livro antigo de alquimia" contrastando muito com a tecnologia do símbolo.</p>
+        </div>
+
+        <!-- Estudo 4: Lora (Leitura Suave e Atual) -->
+        <div class="study-card" style="font-family: 'Lora', serif;">
+          <div class="study-label" style="font-family: 'Inter', sans-serif; font-weight: 500;">4. Lora (Contemporânea)</div>
+          <div class="logo-display">
+            <svg class="logo-symbol" viewBox="0 0 280 243" xmlns="http://www.w3.org/2000/svg">
+              <use href="#arm-3" fill="#ffffff" />
+              <use href="#arm-1" fill="#ebd2c1" />
+              <use href="#arm-2" fill="var(--copper)" />
+            </svg>
+            <div class="logo-type" style="font-family: 'Spectral', serif; color: var(--ink); font-weight: 500; font-size: 2.3rem; letter-spacing: -0.04em;">Paradoxo</div>
+          </div>
+          <p class="explanation" style="font-size: 1.05rem;">A <em>Lora</em> equilibra raízes na caligrafia clássica com pinceladas contemporâneas. Ela dá estaturas de "Revista de Curadoria High-End" aos seus textos. É suave, muito acolhedora e quebra a rigidez sem se esforçar muito.</p>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
