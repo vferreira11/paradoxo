@@ -173,6 +173,39 @@ main {
   align-items: center;
 }
 
+/* Single-column hero variant used by current homepage markup */
+.hero.hero-clean {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+}
+
+.hero-copy-unified {
+  width: min(100%, 840px);
+  margin: 0 auto;
+}
+
+.hero-copy-unified h1 {
+  font-family: "Spectral", serif;
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 8px auto 16px;
+  max-width: 18ch;
+  color: var(--ink);
+}
+
+.hero-copy-unified .hero-lead {
+  margin: 0 auto;
+  max-width: 62ch;
+}
+
+.hero-copy-unified .hero-actions,
+.hero-copy-unified .signal-list {
+  justify-content: center;
+}
+
 .hero::after {
   content: "";
   position: absolute;
