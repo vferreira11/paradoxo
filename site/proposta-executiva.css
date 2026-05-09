@@ -298,8 +298,14 @@ main {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, var(--ink), var(--ink));
-  color: var(--paper-strong);
+  background: var(--copper);
+  color: #fff;
+  border-color: var(--copper);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  background: color-mix(in srgb, var(--copper) 85%, black);
 }
 
 .button-secondary {
@@ -800,7 +806,7 @@ p, li, .hero-lead, .explanation, .nav-toggle {
   background: var(--copper) !important;
   color: #ffffff !important;
   border-color: var(--copper) !important;
-  box-shadow: 0 8px 24px var(--copper-soft);
+  box-shadow: 0 4px 12px var(--copper-soft) !important;
 }
 .button-primary:hover {
   background: #a35f3f !important; /* levemente mais escuro que o copper no hover */
