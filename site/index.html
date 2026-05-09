@@ -188,6 +188,9 @@
                 <!-- Formulário nativo integrado com o Netlify -->
                 <div style="width: 100%; max-width: 480px; text-align: left; background: #ffffff; padding: 40px; border-radius: 2px; box-shadow: 0 10px 40px rgba(23,34,37,0.05); border: 1px solid var(--line);">
                     <form name="avaliacao" method="POST" data-netlify="true" netlify-honeypot="bot-field" autocomplete="off" style="display: flex; flex-direction: column; gap: 32px; margin: 0;">
+                        <!-- Hidden input explícito garantindo que o bot do Netlify leia o nome do form -->
+                        <input type="hidden" name="form-name" value="avaliacao" />
+                        
                         <p style="display: none;">
                             <label>Não preencha se for humano: <input name="bot-field" /></label>
                         </p>
@@ -208,7 +211,7 @@
                         </div>
 
                         <button type="submit" class="button button-primary" style="font-size: 1rem; padding: 18px; letter-spacing: 0.05em; width: 100%; cursor: pointer; border: none; margin-top: 8px;">
-                            Solicitar Diagnóstico
+                            Solicitar Avaliação
                         </button>
                     </form>
                 </div>
