@@ -184,7 +184,34 @@
                 <p style="font-family: 'Newsreader', serif; color: var(--ink-soft); font-size: clamp(1.2rem, 2vw, 1.4rem); line-height: 1.5; margin: 0 0 48px; text-wrap: balance; max-width: 42ch;">
                     Você nos mostra <strong>onde e como</strong> seu negócio perde eficiência. Nós cuidaremos do resto.
                 </p>
-                <a class="button button-primary" href="mailto:contato@paradoxo.pro" target="_blank" rel="noopener noreferrer" style="font-size: 1.1rem; padding: 18px 40px; letter-spacing: 0.05em;">Solicitar Avaliação</a>
+
+                <!-- Formulário nativo integrado com o Netlify -->
+                <div style="width: 100%; max-width: 480px; text-align: left; background: #ffffff; padding: 40px; border-radius: 2px; box-shadow: 0 10px 40px rgba(23,34,37,0.05); border: 1px solid var(--line);">
+                    <form name="avaliacao" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display: flex; flex-direction: column; gap: 32px; margin: 0;">
+                        <p style="display: none;">
+                            <label>Não preencha se for humano: <input name="bot-field" /></label>
+                        </p>
+                        
+                        <div>
+                            <label for="nome" style="display: block; font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Nome</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Ex: Roberto - C-Level Solutions" style="width: 100%; padding: 8px 0; border: none; border-bottom: 1px solid var(--line); font-family: 'Newsreader', serif; font-size: 1.2rem; color: var(--ink); background: transparent; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--copper)'" onblur="this.style.borderColor='var(--line)'">
+                        </div>
+
+                        <div>
+                            <label for="email" style="display: block; font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em;">E-mail corporativo</label>
+                            <input type="email" id="email" name="email" required placeholder="roberto@empresa.com.br" style="width: 100%; padding: 8px 0; border: none; border-bottom: 1px solid var(--line); font-family: 'Newsreader', serif; font-size: 1.2rem; color: var(--ink); background: transparent; outline: none; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--copper)'" onblur="this.style.borderColor='var(--line)'">
+                        </div>
+
+                        <div>
+                            <label for="desafio" style="display: block; font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em;">Qual problema precisamos resolver?</label>
+                            <textarea id="desafio" name="desafio" rows="2" required placeholder="Descreva brevemente o gargalo ou sua expectativa..." style="width: 100%; padding: 8px 0; border: none; border-bottom: 1px solid var(--line); font-family: 'Newsreader', serif; font-size: 1.2rem; color: var(--ink); background: transparent; outline: none; resize: vertical; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--copper)'" onblur="this.style.borderColor='var(--line)'"></textarea>
+                        </div>
+
+                        <button type="submit" class="button button-primary" style="font-size: 1rem; padding: 18px; letter-spacing: 0.05em; width: 100%; cursor: pointer; border: none; margin-top: 8px;">
+                            Solicitar Diagnóstico
+                        </button>
+                    </form>
+                </div>
             </div>
         </section>
       </main>
