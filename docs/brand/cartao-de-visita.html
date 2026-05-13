@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradoxo — Cartão de Visita · Padrão Ouro</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+    :root {
+      --paper:        #f2ede3;
+      --paper-strong: #fbf8f3;
+      --paper-deep:   #e5ddd0;
+      --ink:          #172225;
+      --ink-soft:     #324247;
+      --copper:       #b96c48;
+      --copper-soft:  #ebd2c1;
+      --line:         rgba(23, 34, 37, 0.11);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--paper-deep);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 80px 40px;
+      gap: 60px;
+    }
+
+    .scene-label {
+      text-align: center;
+    }
+    .scene-label h1 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 8px;
+      font-weight: 400;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(23, 34, 37, 0.28);
+    }
+    .scene-label p {
+      margin-top: 6px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px;
+      font-weight: 300;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(185, 108, 72, 0.45);
+    }
+
+    .cards-stage {
+      display: flex;
+      gap: 56px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .card-unit-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 6px;
+      font-weight: 300;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(23, 34, 37, 0.25);
+    }
+
+    /* === Card base — 55 × 85 mm (retrato) === */
+    .card {
+      width: 55mm;
+      height: 85mm;
+      position: relative;
+      border-radius: 3mm;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow:
+        0 1px 3px rgba(23, 34, 37, 0.08),
+        0 6px 20px rgba(23, 34, 37, 0.14),
+        0 24px 56px rgba(23, 34, 37, 0.18);
+    }
+
+    /* =========================================
+       FRENTE
+    ========================================= */
+    .card-front { background-color: var(--paper); }
+
+    .front-rule {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background-color: var(--copper);
+      z-index: 5;
+    }
+
+    .front-body {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5mm;
+      padding: 10mm 8mm;
+      z-index: 2;
+    }
+
+    .penrose-mark {
+      width: 22mm;
+      height: auto;
+      display: block;
+    }
+
+    .front-text-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5mm;
+    }
+
+    .front-brand {
+      font-family: 'Spectral', serif;
+      font-weight: 500;
+      font-size: 17pt;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .front-slogan {
+      font-family: 'Spectral', serif;
+      font-weight: 400;
+      font-size: 5pt;
+      letter-spacing: 0.15em;
+      color: var(--copper);
+      text-transform: uppercase;
+    }
+
+    .front-foot {
+      position: absolute;
+      bottom: 4.5mm;
+      right: 6mm;
+      z-index: 2;
+    }
+    .front-url {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 4pt;
+      font-weight: 300;
+      letter-spacing: 0.14em;
+      color: rgba(23, 34, 37, 0.18);
+    }
+
+    /* =========================================
+       VERSO
+    ========================================= */
+    .card-back { background-color: var(--paper-strong); }
+
+    .back-bar {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background-color: var(--copper);
+      z-index: 5;
+    }
+
+    .back-body {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10mm 8mm;
+      z-index: 2;
+    }
+
+    .back-name {
+      font-family: 'Spectral', serif;
+      font-weight: 500;
+      font-size: 14pt;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 5mm;
+    }
+
+    .back-divider {
+      width: 40%;
+      height: 1px;
+      background: var(--copper);
+      opacity: 0.55;
+      margin-bottom: 5mm;
+    }
+
+    .back-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5mm;
+      margin-bottom: 7mm;
+    }
+    .c-val {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 6.5pt;
+      letter-spacing: 0.02em;
+      color: var(--copper);
+    }
+
+    .back-qr {
+      width: 13mm;
+      height: 13mm;
+      display: block;
+      opacity: 0.55;
+      mix-blend-mode: multiply;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="scene-label">
+    <h1>Paradoxo — Cartão de Visita — Padrão Ouro</h1>
+    <p>55 × 85 mm · Retrato</p>
+  </div>
+
+  <div class="cards-stage">
+
+    <!-- FRENTE -->
+    <div class="card-unit">
+      <div class="card card-front">
+        <div class="front-rule"></div>
+        <div class="front-body">
+          <svg class="penrose-mark" viewBox="0 0 280 242" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M 124.06,12.99 L 15.64,206.03 L 211.76,205.97 L 197.88,182.51 L 54.95,182.53 L 151.67,13.25 Z" fill="#ffffff"/>
+            <path d="M 55.06,182.44 L 80.69,182.56 L 151.22,59.84 L 252.22,228.15 L 264.77,205.26 L 151.56,13.25 Z" fill="#ebd2c1"/>
+            <path d="M 15.63,206.06 L 27.5,228.44 L 252.3,228.28 L 151.23,59.86 L 138.55,81.93 L 211.73,205.93 Z" fill="#b96c48"/>
+          </svg>
+          <div class="front-text-group">
+            <span class="front-brand">Paradoxo</span>
+            <span class="front-slogan">IA Feita à Mão</span>
+          </div>
+        </div>
+        <div class="front-foot">
+          <span class="front-url">paradoxo.pro</span>
+        </div>
+      </div>
+      <div class="card-unit-label">Frente</div>
+    </div>
+
+    <!-- VERSO -->
+    <div class="card-unit">
+      <div class="card card-back">
+        <div class="back-bar"></div>
+        <div class="back-body">
+          <div class="back-name">Vinícius<br>Ferreira</div>
+          <div class="back-divider"></div>
+          <div class="back-contacts">
+            <div><span class="c-val">paradoxo.pro</span></div>
+            <div><span class="c-val">contato@paradoxo.pro</span></div>
+          </div>
+          <img
+            class="back-qr"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=96x96&data=https%3A%2F%2Fwa.me%2F5515997754046&color=172225&bgcolor=fbf8f3&margin=0"
+            width="49" height="49"
+            alt="WhatsApp"
+          />
+        </div>
+      </div>
+      <div class="card-unit-label">Verso</div>
+    </div>
+
+  </div>
+
+</body>
+</html>

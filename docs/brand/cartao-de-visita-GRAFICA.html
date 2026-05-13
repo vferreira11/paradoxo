@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<!--
+  ============================================================
+  PARADOXO - CARTAO DE VISITA - ARTE PARA IMPRESSAO
+  Para pedidos sem Verniz UV. Para pedidos com Verniz usar VERNIZ.pdf
+  Corte: 55 x 85 mm | Sangria: 3mm | Pagina: 61 x 91 mm
+  Fontes > 6pt conforme Printi [OK]
+  ============================================================
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Paradoxo - Cartao de Visita - IMPRESSAO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --paper:        #f2ede3;
+      --paper-strong: #fbf8f3;
+      --ink:          #172225;
+      --copper:       #b96c48;
+      --copper-soft:  #ebd2c1;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page { size: 61mm 91mm; margin: 0; }
+
+    html, body {
+      width: 61mm; height: 91mm;
+      margin: 0; padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .print-page {
+      width: 61mm; height: 91mm;
+      position: relative; overflow: hidden;
+      page-break-after: always;
+    }
+    .print-page:last-of-type { page-break-after: avoid; }
+
+    .card-inner {
+      position: absolute;
+      top: 3mm; left: 3mm;
+      width: 55mm; height: 85mm;
+      display: flex; flex-direction: column;
+    }
+
+    .front-rule,
+    .back-bar {
+      position: absolute;
+      top: 3mm; left: 0; right: 0;
+      height: 2px; z-index: 5;
+    }
+
+    /* FRENTE */
+    .page-front { background-color: var(--paper); }
+    .page-front .front-rule { background-color: var(--copper); }
+
+    .front-body {
+      flex: 1;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 5mm; padding: 10mm 8mm;
+    }
+
+    .penrose-mark { width: 22mm; height: auto; display: block; }
+
+    .front-text-group {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 2.5mm;
+    }
+
+    .front-brand {
+      font-family: 'Spectral', serif;
+      font-weight: 500; font-size: 17pt;
+      letter-spacing: -0.04em; line-height: 1;
+      color: var(--ink);
+    }
+
+    /* 7pt > 6pt minimo Printi [OK] */
+    .front-slogan {
+      font-family: 'Spectral', serif;
+      font-weight: 400; font-size: 7pt;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--copper);
+    }
+
+    .front-foot { position: absolute; bottom: 4.5mm; right: 6mm; }
+
+    /* 7pt > 6pt minimo Printi [OK] */
+    .front-url {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7pt; font-weight: 300; letter-spacing: 0.14em;
+      color: rgba(23,34,37,0.18);
+    }
+
+    /* VERSO */
+    .page-back { background-color: var(--paper-strong); }
+    .page-back .back-bar { background-color: var(--copper); }
+
+    .back-body {
+      flex: 1;
+      display: flex; flex-direction: column;
+      justify-content: center; padding: 10mm 8mm;
+    }
+
+    /* 14pt > 6pt minimo Printi [OK] */
+    .back-name {
+      font-family: 'Spectral', serif;
+      font-weight: 500; font-size: 14pt;
+      letter-spacing: -0.03em; line-height: 1.2;
+      margin-bottom: 5mm; color: var(--ink);
+    }
+
+    .back-divider {
+      width: 40%; height: 1px;
+      background: var(--copper); opacity: 0.55;
+      margin-bottom: 5mm;
+    }
+
+    .back-contacts {
+      display: flex; flex-direction: column;
+      gap: 2.5mm; margin-bottom: 7mm;
+    }
+
+    /* 6,5pt > 6pt minimo Printi [OK] */
+    .c-val {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 6.5pt; letter-spacing: 0.02em;
+      color: var(--copper);
+    }
+
+    .back-qr { width: 13mm; height: 13mm; display: block; opacity: 0.55; }
+
+  </style>
+</head>
+<body>
+
+  <!-- PAG 1: FRENTE -->
+  <div class="print-page page-front">
+    <div class="front-rule"></div>
+    <div class="card-inner">
+      <div class="front-body">
+        <svg class="penrose-mark" viewBox="0 0 280 242" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 124.06,12.99 L 15.64,206.03 L 211.76,205.97 L 197.88,182.51 L 54.95,182.53 L 151.67,13.25 Z" fill="#ffffff"/>
+          <path d="M 55.06,182.44 L 80.69,182.56 L 151.22,59.84 L 252.22,228.15 L 264.77,205.26 L 151.56,13.25 Z" fill="#ebd2c1"/>
+          <path d="M 15.63,206.06 L 27.5,228.44 L 252.3,228.28 L 151.23,59.86 L 138.55,81.93 L 211.73,205.93 Z" fill="#b96c48"/>
+        </svg>
+        <div class="front-text-group">
+          <span class="front-brand">Paradoxo</span>
+          <span class="front-slogan">IA Feita a Mao</span>
+        </div>
+      </div>
+      <div class="front-foot"><span class="front-url">paradoxo.pro</span></div>
+    </div>
+  </div>
+
+  <!-- PAG 2: VERSO -->
+  <div class="print-page page-back">
+    <div class="back-bar"></div>
+    <div class="card-inner">
+      <div class="back-body">
+        <div class="back-name">Vinicius<br>Ferreira</div>
+        <div class="back-divider"></div>
+        <div class="back-contacts">
+          <div><span class="c-val">paradoxo.pro</span></div>
+          <div><span class="c-val">contato@paradoxo.pro</span></div>
+        </div>
+        <img class="back-qr"
+          src="https://api.qrserver.com/v1/create-qr-code/?size=96x96&data=https%3A%2F%2Fwa.me%2F5515997754046&color=172225&bgcolor=fbf8f3&margin=0"
+          width="49" height="49" alt="WhatsApp"
+        />
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

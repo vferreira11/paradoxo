@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<!--
+  PARADOXO - CARTAO DE VISITA - VERNIZ UV LOCAL
+  Pag.1 Mascara Verniz Frente | Pag.2 Arte Frente
+  Pag.3 Mascara Verniz Verso  | Pag.4 Arte Verso
+  Corte 55x85mm | Sangria 3mm | Pagina 61x91mm
+  Verniz 100%K = #231F20 | Retrato
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Paradoxo - Cartao de Visita - VERNIZ UV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper:        #f2ede3;
+      --paper-strong: #fbf8f3;
+      --ink:          #172225;
+      --copper:       #b96c48;
+      --copper-soft:  #ebd2c1;
+      --K:            #231F20;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    @page { size: 61mm 91mm; margin: 0; }
+    html, body { width: 61mm; height: 91mm; margin: 0; padding: 0;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .print-page { width: 61mm; height: 91mm; position: relative;
+      overflow: hidden; page-break-after: always; }
+    .print-page:last-of-type { page-break-after: avoid; }
+    .card-inner { position: absolute; top: 3mm; left: 3mm;
+      width: 55mm; height: 85mm; display: flex; flex-direction: column; }
+    /* barra/filete: 2px = 0,529mm > minimo 0,5mm [OK] */
+    .top-bar { position: absolute; top: 3mm; left: 0; right: 0;
+      height: 2px; z-index: 5; }
+    /* FRENTE */
+    .front-body { flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 5mm; padding: 10mm 8mm; }
+    .penrose-mark { width: 22mm; height: auto; display: block; }
+    .front-text-group { display: flex; flex-direction: column;
+      align-items: center; gap: 2.5mm; }
+    .front-brand { font-family: 'Spectral', serif; font-weight: 500;
+      font-size: 17pt; letter-spacing: -0.04em; line-height: 1; }
+    .front-slogan { font-family: 'Spectral', serif; font-weight: 400;
+      font-size: 7pt; letter-spacing: 0.15em; text-transform: uppercase; }
+    .front-foot { position: absolute; bottom: 4.5mm; right: 6mm; }
+    .front-url { font-family: 'IBM Plex Mono', monospace; font-size: 7pt;
+      font-weight: 300; letter-spacing: 0.14em; }
+    /* VERSO */
+    .back-body { flex: 1; display: flex; flex-direction: column;
+      justify-content: center; padding: 10mm 8mm; }
+    .back-name { font-family: 'Spectral', serif; font-weight: 500;
+      font-size: 14pt; letter-spacing: -0.03em; line-height: 1.2;
+      margin-bottom: 5mm; }
+    .back-divider { width: 40%; margin-bottom: 5mm; }
+    .back-contacts { display: flex; flex-direction: column;
+      gap: 2.5mm; margin-bottom: 7mm; }
+    .c-val { font-family: 'IBM Plex Mono', monospace;
+      font-size: 6.5pt; letter-spacing: 0.02em; }
+    .back-qr { width: 13mm; height: 13mm; display: block; }
+    /* ---- MASCARA: fundo branco, verniz em #231F20 ---- */
+    .page-mask { background-color: #ffffff; }
+    .page-mask .top-bar       { background-color: var(--K); }
+    .page-mask .front-brand   { color: var(--K); }
+    .page-mask .back-name     { color: var(--K); }
+    .page-mask .back-divider  { height: 0.5mm; background: var(--K); }
+    /* Excluidos da mascara: abaixo do minimo 8pt */
+    .page-mask .front-slogan  { display: none; }
+    .page-mask .front-foot    { display: none; }
+    .page-mask .back-contacts { display: none; }
+    .page-mask .back-qr       { display: none; }
+    /* ---- ARTE: cores reais ---- */
+    .page-front { background-color: var(--paper); }
+    .page-back  { background-color: var(--paper-strong); }
+    .page-front .top-bar      { background-color: var(--copper); }
+    .page-front .front-brand  { color: var(--ink); }
+    .page-front .front-slogan { color: var(--copper); }
+    .page-front .front-url    { color: rgba(23,34,37,0.18); }
+    .page-back  .top-bar      { background-color: var(--copper); }
+    .page-back  .back-name    { color: var(--ink); }
+    .page-back  .back-divider { height: 1px; background: var(--copper); opacity: 0.55; }
+    .page-back  .c-val        { color: var(--copper); }
+    .page-back  .back-qr      { opacity: 0.55; }
+  </style>
+</head>
+<body>
+
+  <!-- PAG 1: MASCARA VERNIZ UV - FRENTE -->
+  <div class="print-page page-mask">
+    <div class="top-bar"></div>
+    <div class="card-inner">
+      <div class="front-body">
+        <svg class="penrose-mark" viewBox="0 0 280 242" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 124.06,12.99 L 15.64,206.03 L 211.76,205.97 L 197.88,182.51 L 54.95,182.53 L 151.67,13.25 Z" fill="#231F20"/>
+          <path d="M 55.06,182.44 L 80.69,182.56 L 151.22,59.84 L 252.22,228.15 L 264.77,205.26 L 151.56,13.25 Z" fill="#231F20"/>
+          <path d="M 15.63,206.06 L 27.5,228.44 L 252.3,228.28 L 151.23,59.86 L 138.55,81.93 L 211.73,205.93 Z" fill="#231F20"/>
+        </svg>
+        <div class="front-text-group">
+          <span class="front-brand">Paradoxo</span>
+          <span class="front-slogan">IA Feita &agrave; M&atilde;o</span>
+        </div>
+      </div>
+      <div class="front-foot"><span class="front-url">paradoxo.pro</span></div>
+    </div>
+  </div>
+
+  <!-- PAG 2: ARTE - FRENTE -->
+  <div class="print-page page-front">
+    <div class="top-bar"></div>
+    <div class="card-inner">
+      <div class="front-body">
+        <svg class="penrose-mark" viewBox="0 0 280 242" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 124.06,12.99 L 15.64,206.03 L 211.76,205.97 L 197.88,182.51 L 54.95,182.53 L 151.67,13.25 Z" fill="#ffffff"/>
+          <path d="M 55.06,182.44 L 80.69,182.56 L 151.22,59.84 L 252.22,228.15 L 264.77,205.26 L 151.56,13.25 Z" fill="#ebd2c1"/>
+          <path d="M 15.63,206.06 L 27.5,228.44 L 252.3,228.28 L 151.23,59.86 L 138.55,81.93 L 211.73,205.93 Z" fill="#b96c48"/>
+        </svg>
+        <div class="front-text-group">
+          <span class="front-brand">Paradoxo</span>
+          <span class="front-slogan">IA Feita &agrave; M&atilde;o</span>
+        </div>
+      </div>
+      <div class="front-foot"><span class="front-url">paradoxo.pro</span></div>
+    </div>
+  </div>
+
+  <!-- PAG 3: MASCARA VERNIZ UV - VERSO -->
+  <div class="print-page page-mask">
+    <div class="top-bar"></div>
+    <div class="card-inner">
+      <div class="back-body">
+        <div class="back-name">Vin&#237;cius<br>Ferreira</div>
+        <div class="back-divider"></div>
+        <div class="back-contacts">
+          <div><span class="c-val">paradoxo.pro</span></div>
+          <div><span class="c-val">contato@paradoxo.pro</span></div>
+        </div>
+        <img class="back-qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgAQMAAADYVuV7AAAABlBMVEX///8jHyCZ/QWRAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA70lEQVQ4jZXTMY7EIAwF0B9RUOYGm4tE4lp00HEtJF8k3ICSAs1fo9Wkm1nHFa9AMh8bJKuTnIoe8BkXNpHqswd2KxpbhRu+7HwCoXD4Z6gn/COsRmcY8e7aAM1BREp5p/MBq8KMuMsAsnGeMcbeuxVHu4IIS+4w43W06WpiYacVP9sLcDmxawZGAFsNkuG58wuu43IVMWK9x4qtVUeOuHqz4tDeNDdw/akNOi4Tp9cf1ecYoeWmGynv3Yw1OxNRx3/nF+gk1lPj1Ttm/G3JSNpbfwTd4HSvmRHMa47NWJvFiTTYzViB1JCR3jv3P34BIsx5a88vDB4AAAAASUVORK5CYII=" width="49" height="49" alt="QR mascara">
+      </div>
+    </div>
+  </div>
+
+  <!-- PAG 4: ARTE - VERSO -->
+  <div class="print-page page-back">
+    <div class="top-bar"></div>
+    <div class="card-inner">
+      <div class="back-body">
+        <div class="back-name">Vin&#237;cius<br>Ferreira</div>
+        <div class="back-divider"></div>
+        <div class="back-contacts">
+          <div><span class="c-val">paradoxo.pro</span></div>
+          <div><span class="c-val">contato@paradoxo.pro</span></div>
+        </div>
+        <img class="back-qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgAQMAAADYVuV7AAAABlBMVEX7+PMXIiXDetVSAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA70lEQVQ4jZXTMY7EIAwF0B9RUOYGm4tE4lp00HEtJF8k3ICSAs1fo9Wkm1nHFa9AMh8bJKuTnIoe8BkXNpHqswd2KxpbhRu+7HwCoXD4Z6gn/COsRmcY8e7aAM1BREp5p/MBq8KMuMsAsnGeMcbeuxVHu4IIS+4w43W06WpiYacVP9sLcDmxawZGAFsNkuG58wuu43IVMWK9x4qtVUeOuHqz4tDeNDdw/akNOi4Tp9cf1ecYoeWmGynv3Yw1OxNRx3/nF+gk1lPj1Ttm/G3JSNpbfwTd4HSvmRHMa47NWJvFiTTYzViB1JCR3jv3P34BIsx5a88vDB4AAAAASUVORK5CYII=" width="49" height="49" alt="WhatsApp">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
